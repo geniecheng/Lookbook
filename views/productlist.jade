@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	h1.
+		Products
+	ul
+		each product, i in productlist
+			li
+				a(href=product.link)=product.title
+				br
+				a(href=product.link): img(src=product.image, width='500')

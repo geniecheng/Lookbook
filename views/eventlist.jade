@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1. 
+		Event List
+	ul
+		each event, i in eventlist
+			li
+				p.funny
+					| #[a(href="#{event.link}", target="_blank")=event.title]
+					| #[br] 
+					| #{event.start.toDateString()} through #{event.end.toDateString()}
+				
+			
